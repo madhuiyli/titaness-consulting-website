@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Titaness Consulting LLC provides public-sector IT consulting, project delivery, business analysis, Agile delivery, modernization, QA, data, procurement, and professional services." />
+  <meta name="theme-color" content="#081b2d" />
+  <title>Titaness Consulting LLC | Public Sector IT Consulting</title>
+  <style>
+    :root{
+      --navy:#081b2d; --navy2:#0d2a45; --blue:#1e63a2; --cyan:#5eb8c3;
+      --teal:#2f8f8c; --ink:#122538; --muted:#617487; --line:#dde6ed;
+      --paper:#f5f8fb; --white:#fff; --shadow:0 24px 70px rgba(8,27,45,.13);
+      --radius:26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .container{width:min(1220px,calc(100% - 42px));margin:auto}
+    .eyebrow{font-size:.76rem;letter-spacing:.17em;text-transform:uppercase;font-weight:850;color:var(--teal);margin-bottom:14px}
+    h1,h2,h3{line-height:1.08;margin:0 0 18px;letter-spacing:-.03em}
+    h1{font-size:clamp(3.15rem,7.1vw,6.7rem);max-width:980px;letter-spacing:-.057em}
+    h2{font-size:clamp(2.25rem,4.6vw,4.25rem);max-width:850px}
+    h3{font-size:1.28rem}
+    p{margin:0 0 17px;color:var(--muted)}
+    .section{padding:102px 0}
+    .section.alt{background:var(--paper)}
+    .section.dark{background:var(--navy);color:#fff}
+    .section.dark p{color:#bdd0df}
+    .section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:44px}
+    .section-head p{max-width:520px}
+
+    .topbar{background:#061522;color:#c7d7e3;font-size:.82rem;border-bottom:1px solid rgba(255,255,255,.08)}
+    .topbar .container{display:flex;justify-content:space-between;gap:20px;padding:8px 0}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(221,230,237,.82)}
+    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{display:flex;align-items:center;gap:13px;font-weight:900;letter-spacing:.02em;white-space:nowrap}
+    .brand-mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--teal));position:relative;box-shadow:0 10px 25px rgba(30,99,162,.27);overflow:hidden}
+    .brand-mark:before{content:"";position:absolute;inset:8px;border:2px solid rgba(255,255,255,.85);transform:rotate(45deg);border-radius:7px}
+    .brand-mark:after{content:"";position:absolute;width:18px;height:18px;border:2px solid rgba(255,255,255,.92);border-radius:50%;right:4px;bottom:4px}
+    .brand small{display:block;font-size:.66rem;color:#738596;letter-spacing:.14em;text-transform:uppercase;margin-top:2px}
+    .navlinks{display:flex;gap:24px;align-items:center;font-size:.91rem;font-weight:760;color:#31485c}
+    .navlinks a{position:relative;padding:29px 0}
+    .navlinks a:after{content:"";position:absolute;left:0;bottom:19px;width:0;height:2px;background:var(--teal);transition:.25s}
+    .navlinks a:hover:after{width:100%}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 20px;border-radius:999px;border:1px solid transparent;font-weight:830;transition:.25s ease;cursor:pointer}
+    .btn.primary{background:var(--navy);color:#fff;box-shadow:0 10px 28px rgba(8,27,45,.14)}
+    .btn.primary:hover{transform:translateY(-2px);background:#0f3452}
+    .btn.secondary{border-color:#bac9d4;background:#fff;color:var(--navy)}
+    .btn.secondary:hover{border-color:var(--blue);color:var(--blue)}
+    .btn.light{background:#fff;color:var(--navy)}
+    .menu{display:none;background:none;border:0;color:var(--navy);font-size:1.5rem}
+
+    .hero{position:relative;padding:110px 0 84px;overflow:hidden;background:linear-gradient(180deg,#f7fbfd 0%,#fff 92%)}
+    .hero:before{content:"";position:absolute;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(94,184,195,.19),rgba(94,184,195,0) 68%);right:-290px;top:-250px}
+    .hero:after{content:"";position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(30,99,162,.12),rgba(30,99,162,0) 67%);left:-330px;bottom:-360px}
+    .hero-grid{display:grid;grid-template-columns:1.13fr .87fr;gap:52px;align-items:center;position:relative;z-index:2}
+    .hero p{font-size:1.15rem;max-width:720px;color:#536c7f}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .hero-proof{display:flex;gap:24px;flex-wrap:wrap;margin-top:35px;color:#587084;font-size:.88rem}
+    .proof{display:flex;align-items:center;gap:8px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 5px rgba(47,143,140,.1)}
+
+    .visual{position:relative;min-height:520px;border-radius:34px;background:linear-gradient(145deg,#071a2b 0%,#0d2f4d 65%,#145168 100%);box-shadow:0 35px 90px rgba(8,27,45,.25);overflow:hidden;border:1px solid rgba(255,255,255,.12)}
+    .visual:before,.visual:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.13);border-radius:50%}
+    .visual:before{width:430px;height:430px;right:-130px;top:-110px}
+    .visual:after{width:260px;height:260px;left:-90px;bottom:-85px}
+    .orb{position:absolute;width:210px;height:210px;border-radius:50%;right:45px;top:56px;background:radial-gradient(circle at 35% 30%,#9de4e4 0%,#5bb3bf 30%,#24729a 67%,#153d59 100%);box-shadow:0 25px 55px rgba(0,0,0,.28)}
+    .gridlines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),transparent)}
+    .visual-copy{position:absolute;left:34px;right:34px;top:34px;z-index:3}
+    .visual-copy .tag{display:inline-block;padding:8px 10px;border:1px solid rgba(255,255,255,.16);border-radius:999px;color:#a9d6d7;font-size:.71rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800;background:rgba(255,255,255,.05)}
+    .visual-copy h3{color:#fff;font-size:2.15rem;max-width:380px;margin-top:20px}
+    .visual-cards{position:absolute;left:28px;right:28px;bottom:28px;display:grid;grid-template-columns:1fr 1fr;gap:12px;z-index:4}
+    .mini{padding:16px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.075);border-radius:16px;backdrop-filter:blur(10px)}
+    .mini strong{display:block;color:#fff;font-size:.94rem}.mini span{color:#b9cedd;font-size:.76rem}
+
+    .metricbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr)}
+    .metric{padding:28px 26px;border-right:1px solid var(--line)}
+    .metric:last-child{border-right:0}.metric strong{display:block;color:var(--navy);font-size:1.1rem}.metric span{font-size:.82rem;color:#708294}
+
+    .about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:86px;align-items:start}
+    .about-copy .lead{font-size:1.14rem;color:#4f687c}
+    .quote{margin-top:28px;padding:24px 28px;border-left:4px solid var(--teal);background:#f7fafb;border-radius:0 18px 18px 0;font-weight:760;color:#264b63}
+    .principles{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px}
+    .principle{padding:20px;border:1px solid var(--line);border-radius:18px;background:#fff}
+    .principle b{display:block;margin-bottom:5px;color:var(--navy)}
+    .principle span{font-size:.88rem;color:#6c7f90}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;min-height:252px;overflow:hidden;transition:.27s ease}
+    .card:before{content:"";position:absolute;inset:auto -80px -90px auto;width:165px;height:165px;border-radius:50%;background:radial-gradient(circle,rgba(94,184,195,.13),rgba(94,184,195,0) 70%)}
+    .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#c7d8e3}
+    .icon{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#eaf6f5,#eaf1f8);display:grid;place-items:center;color:var(--blue);font-weight:900;margin-bottom:24px}
+    .card p{font-size:.94rem}
+    .arrow{display:inline-block;margin-top:10px;color:var(--blue);font-weight:800;font-size:.86rem}
+
+    .gov-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:stretch}
+    .gov-panel{border-radius:30px;padding:42px;background:linear-gradient(135deg,#0a243c,#124769);color:#fff;position:relative;overflow:hidden}
+    .gov-panel:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;border:1px solid rgba(255,255,255,.12);right:-70px;bottom:-100px}
+    .gov-panel p{color:#d2e1ea}.gov-panel .eyebrow{color:#96d2d0}
+    .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}.chip{padding:9px 12px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(255,255,255,.06);font-size:.82rem;color:#e9f2f6}
+    .process{display:grid;gap:12px}
+    .process-step{padding:23px 24px;border:1px solid var(--line);border-radius:20px;background:#fff;display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start}
+    .num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#eaf4f5;color:var(--teal);font-weight:900}
+    .process-step h3{font-size:1.08rem;margin-bottom:5px}.process-step p{font-size:.89rem;margin:0}
+
+    .experience{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .exp-box{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px}
+    .exp-box ul{margin:17px 0 0;padding-left:19px;color:#526b7e}.exp-box li{margin:10px 0}.note{font-size:.8rem;color:#8393a1;margin-top:16px}
+
+    .credentials{display:grid;grid-template-columns:1fr 1fr 1fr;gap:17px;margin-top:34px}
+    .cred-card{padding:30px;border-radius:22px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.055)}
+    .cred-card strong{display:block;color:#fff;font-size:1.15rem;margin-bottom:7px}.cred-card span{color:#b7ccda;font-size:.9rem}
+
+    .insights{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+    .insight{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff}
+    .insight-top{height:150px;background:linear-gradient(135deg,#0c2b46,#1d658a);position:relative;overflow:hidden}
+    .insight-top:before{content:"";position:absolute;width:180px;height:180px;border:1px solid rgba(255,255,255,.18);border-radius:50%;right:-30px;top:-50px}
+    .insight-top:after{content:"";position:absolute;width:90px;height:90px;background:rgba(94,184,195,.25);border-radius:24px;left:28px;bottom:-28px;transform:rotate(24deg)}
+    .insight-body{padding:23px}.insight-body small{color:var(--teal);font-weight:850;text-transform:uppercase;letter-spacing:.11em}.insight-body h3{margin-top:10px;font-size:1.18rem}
+
+    .cta{padding:88px 0;background:linear-gradient(135deg,#eaf5f4 0%,#edf4fa 70%,#f8fbfd 100%)}
+    .cta-box{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+
+    footer{background:#061522;color:#b7c7d4;padding:58px 0 26px}
+    .footer-grid{display:grid;grid-template-columns:1.25fr .75fr .75fr;gap:45px}
+    footer h4{margin:0 0 14px;color:#fff}footer p,footer a{color:#aebfcc;font-size:.9rem}footer a{display:block;margin:7px 0}.copyright{margin-top:38px;padding-top:20px;border-top:1px solid rgba(255,255,255,.09);display:flex;justify-content:space-between;gap:20px;font-size:.8rem;color:#7f95a6}
+
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+    @media (max-width:1020px){
+      .navlinks{display:none;position:absolute;top:82px;left:0;right:0;background:#fff;padding:18px 24px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.navlinks a{padding:6px 0}.navlinks a:after{display:none}.menu{display:block}.nav>.btn{display:none}
+      .hero-grid,.about-grid,.gov-wrap,.cta-box,.footer-grid{grid-template-columns:1fr}.visual{min-height:460px}.cards,.insights,.credentials{grid-template-columns:repeat(2,1fr)}.metrics{grid-template-columns:repeat(2,1fr)}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    }
+    @media (max-width:680px){
+      .container{width:min(100% - 28px,1220px)}.section{padding:75px 0}.topbar .container{overflow:auto;justify-content:flex-start;white-space:nowrap}.topbar span:last-child{display:none}h1{font-size:3.25rem}.hero{padding:68px 0 56px}.hero-proof{gap:14px}.visual{min-height:510px}.visual-cards{grid-template-columns:1fr}.orb{width:170px;height:170px;right:20px}.cards,.insights,.credentials,.experience,.principles{grid-template-columns:1fr}.metrics{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)!important}.metric:last-child{border-bottom:0!important}.section-head{display:block}.gov-panel{padding:30px}.cta-box{gap:18px}.copyright{flex-direction:column}.brand{font-size:.83rem}.brand-mark{width:38px;height:38px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>Folsom, California &nbsp;|&nbsp; Public-Sector IT Consulting</span><span>DGS Certified Small Business &nbsp;•&nbsp; CMAS #3-23-10-1035</span></div></div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"></span><span>TITANESS CONSULTING LLC<small>Public Sector Technology</small></span></a>
+      <nav class="navlinks" id="navlinks" aria-label="Primary navigation">
+        <a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#public-sector">Public Sector</a><a href="#experience">Experience</a><a href="#contracting">Contracting</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="btn primary" href="#contact">Discuss an Opportunity →</a>
+      <button class="menu" id="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal visible">
+          <div class="eyebrow">Public-sector technology delivery</div>
+          <h1>Make complex government IT easier to deliver.</h1>
+          <p>Titaness Consulting LLC helps public-sector organizations and prime contractors plan, govern, modernize, and execute technology initiatives with strong project leadership, disciplined analysis, and accountable delivery.</p>
+          <div class="hero-actions"><a class="btn primary" href="#capabilities">Explore Capabilities →</a><a class="btn secondary" href="#contracting">Contracting Credentials</a></div>
+          <div class="hero-proof"><span class="proof"><i class="dot"></i> California-based</span><span class="proof"><i class="dot"></i> Small-business ready</span><span class="proof"><i class="dot"></i> Prime • Sub • Teaming</span></div>
+        </div>
+        <aside class="visual reveal" aria-label="Titaness consulting overview">
+          <div class="gridlines"></div><div class="orb"></div>
+          <div class="visual-copy"><span class="tag">Built for public-sector delivery</span><h3>Structure the work. Align the team. Move the mission forward.</h3></div>
+          <div class="visual-cards">
+            <div class="mini"><strong>Program & Project Delivery</strong><span>Governance, execution, reporting</span></div>
+            <div class="mini"><strong>Business & Systems Analysis</strong><span>Requirements, process, traceability</span></div>
+            <div class="mini"><strong>Modernization & Integration</strong><span>Cloud, SaaS, data, implementation</span></div>
+            <div class="mini"><strong>Quality & Readiness</strong><span>QA, UAT, risk, transition</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="metricbar">
+      <div class="container metrics">
+        <div class="metric"><strong>DGS Certified Small Business</strong><span>California contracting credential</span></div>
+        <div class="metric"><strong>CMAS Contractor</strong><span>Contract No. 3-23-10-1035</span></div>
+        <div class="metric"><strong>Woman-Owned Small Business</strong><span>California LLC</span></div>
+        <div class="metric"><strong>Public-Sector Focus</strong><span>Delivery, modernization & professional services</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="reveal"><div class="eyebrow">About Titaness</div><h2>Built around the realities of government technology.</h2></div>
+        <div class="about-copy reveal">
+          <p class="lead">Public-sector IT succeeds when technology, governance, procurement, people, and delivery discipline work together.</p>
+          <p>Titaness Consulting LLC supports agencies and prime contractors with project and program management, business and systems analysis, Agile delivery, modernization, QA, data and integration, procurement support, and implementation governance.</p>
+          <div class="quote">Our objective is straightforward: reduce delivery friction, improve decision quality, and keep critical initiatives moving.</div>
+          <div class="principles">
+            <div class="principle"><b>Mission aligned</b><span>Technology work connected to public outcomes.</span></div>
+            <div class="principle"><b>Delivery disciplined</b><span>Clear ownership, controls, reporting, and follow-through.</span></div>
+            <div class="principle"><b>Stakeholder centered</b><span>Communication designed for executives, business, and technical teams.</span></div>
+            <div class="principle"><b>Procurement aware</b><span>Support that respects public-sector contracting realities.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="capabilities">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="eyebrow">Capabilities</div><h2>End-to-end support across the technology lifecycle.</h2></div><p>Flexible consulting support from early planning and requirements through implementation, validation, transition, and operational readiness.</p></div>
+        <div class="cards">
+          <article class="card reveal"><div class="icon">01</div><h3>Project & Program Management</h3><p>Plans, schedules, governance, resources, dependencies, risks, issues, executive reporting, implementation, and closeout.</p><span class="arrow">Delivery leadership →</span></article>
+          <article class="card reveal"><div class="icon">02</div><h3>PMO Services</h3><p>Portfolio governance, delivery standards, prioritization, project controls, status reporting, and oversight.</p><span class="arrow">Governance & controls →</span></article>
+          <article class="card reveal"><div class="icon">03</div><h3>Agile & Scrum Delivery</h3><p>Sprint planning, backlog refinement, user stories, retrospectives, roadmaps, release coordination, and delivery cadence.</p><span class="arrow">Agile execution →</span></article>
+          <article class="card reveal"><div class="icon">04</div><h3>Business & Systems Analysis</h3><p>Requirements, process mapping, As-Is/To-Be analysis, gap analysis, RTM, workshops, and user stories.</p><span class="arrow">Analysis & requirements →</span></article>
+          <article class="card reveal"><div class="icon">05</div><h3>Application Modernization</h3><p>Legacy transformation, cloud and SaaS planning, migration, integration, digital modernization, and implementation support.</p><span class="arrow">Modernization →</span></article>
+          <article class="card reveal"><div class="icon">06</div><h3>Quality Assurance & Testing</h3><p>Test planning, UAT, requirements verification, validation, defect management, and implementation readiness.</p><span class="arrow">Quality & readiness →</span></article>
+          <article class="card reveal"><div class="icon">07</div><h3>Data & Integration</h3><p>Data migration, reporting, analytics, interfaces, enterprise integration, and architecture support.</p><span class="arrow">Data delivery →</span></article>
+          <article class="card reveal"><div class="icon">08</div><h3>Procurement & Vendor Management</h3><p>RFP/SOW support, vendor evaluation, deliverable oversight, contract coordination, and performance management.</p><span class="arrow">Procurement support →</span></article>
+          <article class="card reveal"><div class="icon">09</div><h3>IT Professional Services</h3><p>Project Managers, Business Analysts, Solution Architects, Developers, QA professionals, Product Owners, and Scrum Masters.</p><span class="arrow">Professional services →</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="public-sector">
+      <div class="container gov-wrap">
+        <div class="gov-panel reveal">
+          <div class="eyebrow">Public-sector consulting</div><h2>Designed around government governance and accountability.</h2><p>We align delivery with the controls, documentation, stakeholder expectations, and procurement realities that shape California public-sector IT.</p>
+          <div class="chips"><span class="chip">California PM Framework</span><span class="chip">PAL Support</span><span class="chip">RFP / SOW Development</span><span class="chip">Requirements Traceability</span><span class="chip">Vendor Coordination</span><span class="chip">UAT & Readiness</span><span class="chip">Risk & Issue Governance</span><span class="chip">Executive Reporting</span></div>
+        </div>
+        <div class="process reveal">
+          <div class="process-step"><div class="num">01</div><div><h3>Plan</h3><p>Define scope, outcomes, governance, schedule, resources, dependencies, and procurement path.</p></div></div>
+          <div class="process-step"><div class="num">02</div><div><h3>Align</h3><p>Clarify requirements, facilitate decisions, coordinate stakeholders, and establish traceability.</p></div></div>
+          <div class="process-step"><div class="num">03</div><div><h3>Deliver</h3><p>Manage execution, QA/UAT, reporting, risk, issue resolution, and implementation readiness.</p></div></div>
+          <div class="process-step"><div class="num">04</div><div><h3>Sustain</h3><p>Support transition, documentation, knowledge transfer, operational readiness, and improvement.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="experience">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="eyebrow">Experience</div><h2>Relevant experience across government technology environments.</h2></div><p>Our positioning emphasizes demonstrated delivery disciplines while clearly distinguishing personnel experience from Titaness corporate past performance.</p></div>
+        <div class="experience">
+          <div class="exp-box reveal"><h3>Representative Personnel Experience</h3><p>Consulting personnel may bring prior experience supporting California State environments including:</p><ul><li>Department of Motor Vehicles (DMV)</li><li>Department of Justice (DOJ)</li><li>California Air Resources Board (CARB)</li><li>California Department of Public Health (CDPH)</li><li>Department of Health Care Services (DHCS)</li><li>California Department of Corrections and Rehabilitation (CDCR)</li><li>California Department of Food and Agriculture (CDFA)</li><li>Department of Developmental Services (DDS)</li></ul><p class="note">Representative personnel experience is distinguished from Titaness corporate past performance.</p></div>
+          <div class="exp-box reveal"><h3>Delivery Areas</h3><p>Experience relevant to complex government initiatives includes:</p><ul><li>Project and program delivery leadership</li><li>Business and systems analysis</li><li>Modernization and implementation support</li><li>Agile delivery and release coordination</li><li>Procurement and vendor management</li><li>Quality assurance and UAT coordination</li><li>Stakeholder communication and executive reporting</li><li>Documentation and implementation governance</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="contracting">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="eyebrow" style="color:#94d2d0">Contracting</div><h2>Easy to engage. Ready to team.</h2></div><p>Titaness supports agencies and prime contractors through California small-business participation, CMAS engagements, subcontracting, and teaming arrangements.</p></div>
+        <div class="credentials">
+          <div class="cred-card reveal"><strong>DGS Certified Small Business</strong><span>Certified for participation in California public-sector small-business contracting opportunities.</span></div>
+          <div class="cred-card reveal"><strong>CMAS Contractor</strong><span>Contract No. 3-23-10-1035 — California Multiple Award Schedules contracting credential.</span></div>
+          <div class="cred-card reveal"><strong>Woman-Owned Small Business</strong><span>Woman-owned California LLC available for prime, subcontracting, and teaming engagements.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="insights">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="eyebrow">How we create value</div><h2>Focused support for high-accountability technology work.</h2></div><p>Like larger consultancies, Titaness presents clear service areas and delivery thinking—without overstating scale or past performance.</p></div>
+        <div class="insights">
+          <article class="insight reveal"><div class="insight-top"></div><div class="insight-body"><small>Delivery</small><h3>Turn strategy into executable plans.</h3><p>Translate objectives into governance, milestones, roles, risks, and measurable delivery outcomes.</p></div></article>
+          <article class="insight reveal"><div class="insight-top"></div><div class="insight-body"><small>Modernization</small><h3>Connect business needs to technology change.</h3><p>Clarify requirements, integration needs, migration constraints, readiness, and implementation decisions.</p></div></article>
+          <article class="insight reveal"><div class="insight-top"></div><div class="insight-body"><small>Partnership</small><h3>Strengthen prime and agency delivery teams.</h3><p>Add focused leadership and professional services capacity where accountability, communication, and execution matter most.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container cta-box reveal">
+        <div><div class="eyebrow">Start a conversation</div><h2>Need a focused public-sector IT partner?</h2><p>Discuss a project, teaming opportunity, CMAS engagement, subcontracting need, or professional-services requirement.</p></div>
+        <a class="btn primary" href="mailto:madhu.iyli@titanessconsultingllc.com">Email Madhu Iyli →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><a class="brand" href="#home" style="color:#fff"><span class="brand-mark"></span><span>TITANESS CONSULTING LLC<small style="color:#7890a1">Public Sector Technology</small></span></a><p style="margin-top:18px;max-width:520px">Technology consulting and professional services for public-sector organizations and prime contractors.</p></div>
+        <div><h4>Contact</h4><p>Madhu Iyli, Owner<br>675 Townsend Court<br>Folsom, CA</p><a href="tel:+17035990540">(703) 599-0540</a><a href="mailto:madhu.iyli@titanessconsultingllc.com">madhu.iyli@titanessconsultingllc.com</a></div>
+        <div><h4>Credentials</h4><p>DGS Certified Small Business<br>CMAS #3-23-10-1035<br>Woman-Owned Small Business</p></div>
+      </div>
+      <div class="copyright"><span>© 2026 Titaness Consulting LLC. All rights reserved.</span><span>Folsom, California</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const menu=document.getElementById('menu');
+    const nav=document.getElementById('navlinks');
+    menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open)});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+    const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
